@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
+  
   <body>
-
 <canvas id="cnv" style="border:1px solid #000000;">
   <div style="background-color:aqua; width:100px; height: 100px; z-index: 1000;"></div>
 </canvas>
@@ -43,6 +43,7 @@ function animate() {
   ctx.arc(x, y, r, 0, Math.PI * 2);
   ctx.fill();
 
+  //Using setTimeout instead of window.requestAnimationFrame for slower speed... window.requestAnimationFrame is approximately equal to setTimeout(func, 17);
   setTimeout(animate, 100);
 }
 animate();
